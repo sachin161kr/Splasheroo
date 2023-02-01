@@ -8,6 +8,7 @@ import {
   moderateVerticalScale,
   scale,
 } from 'react-native-size-matters';
+import {s} from 'react-native-wind';
 
 const Signup = () => {
   const navigation = useNavigation();
@@ -21,12 +22,14 @@ const Signup = () => {
   }, []);
 
   return (
-    <SafeAreaView className="bg-white h-full">
+    <SafeAreaView style={s`bg-white h-full`}>
       <View>
         <Image source={Banner} />
       </View>
       <View style={{margin: moderateVerticalScale(20)}}>
-        <Text className="px-4 text-[17px]">Create Account</Text>
+        <Text style={{fontSize: moderateVerticalScale(14)}}>
+          Create Account
+        </Text>
       </View>
       <View
         style={{margin: moderateVerticalScale(20)}}

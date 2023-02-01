@@ -10,6 +10,8 @@ import {
 } from 'react-native-size-matters';
 
 function StartBookingScreen() {
+  const [active, setActive] = React.useState('');
+
   const navigation = useNavigation();
   useLayoutEffect(() => {
     navigation.setOptions({
